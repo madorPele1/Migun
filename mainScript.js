@@ -9,9 +9,12 @@ window.addEventListener("load", () => { // Initializing the lomda
     thirdText = document.getElementById("third-text");
     fourthText = document.getElementById("fourth-text");
     video = document.getElementById("migun-vid");
-    // video.addEventListener('loadeddata', () => {
-        textHandle();
-    // });
+    vidInterval = setInterval(() => {
+            if (video.currentTime > 0) {
+                textHandle();
+                clearInterval(vidInterval);
+            }
+        }, 100);
 });
 
 const textHandle = () => {
