@@ -1,0 +1,65 @@
+@font-face {
+    font-family: heebo;
+    src: url(assets/fonts/Heebo/Heebo-VariableFont_wght.ttf);
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background-color: #CFCCCD;
+    font-family: heebo;
+}
+
+#migun-vid {
+    width: 80vw;
+    height: 80vh;
+    align-self: center;
+    position: relative;
+    left: 10%;
+}
+
+.vid-div {
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    position: absolute;
+    bottom: 0;
+}
+
+.vid-text {
+    position: absolute;
+    top: 2%;
+    left: 37%;
+    width: 25vw;
+    text-align: center;
+    font-size: 1.5vmax;
+    opacity: 0;
+}
+
+.hide-text {
+    animation: 1.5s fade-out forwards;
+}
+
+.display-text {
+    animation: 1.5s fade-in forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        display: block;
+    }
+}
